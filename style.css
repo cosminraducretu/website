@@ -1,0 +1,715 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+
+    /*welcome page*/
+}
+.header{
+    min-height: 100vh ;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(photos/backgroundpicture.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size:  13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:#f44366;
+    display:block;
+    margin:auto;
+    transition: 0.75s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+}
+.home-btn{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.home-btn:hover{
+    border: 1px solid #f44346;
+    background: #f44346;
+    transition: 1s;
+}
+
+/*products*/
+
+
+.products{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color:#777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
+}
+.row{
+    margin-top:5% ;
+    display: flex;
+    justify-content: space-between;
+}
+.product-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.product-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/*  Locations */
+
+
+.Locations{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+}
+.Locations-photos{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.Locations-photos img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.75s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.75s;
+}
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+
+}
+
+/*Help and Support*/
+
+.help{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+.help-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+ .help-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+ .help-col p{
+    padding: 0;
+}
+
+.help-col h3{
+    margin-bottom:15px ;
+    margin-top: 16px;
+    text-align: left;
+}
+
+
+/*  If you have any questions or feedback */
+
+.feedback{
+
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.feedback-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.feedback-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.feedback-col p{
+    padding: 0;
+}
+.feedback-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.feedback-col .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+}
+/*contacts*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(photos/banner2.jpg) ;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+     color:#fff;
+     margin-bottom: 20px;
+     padding: 0;
+}
+
+.cta h2{
+     color:#fff;
+     margin-bottom: 40px;
+     padding: 0;
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer:h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+}
+
+
+/*-------- ABOUT US PAGE-------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(photos/backgroud.jpg);
+    background-position:center ;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: -20px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img {
+    width: 100%;
+}
+.about-col h1{
+    padding-top:  0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+.red-btn:hover{
+    color: white;
+}
+
+/*----Careers---*/
+
+.career-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.career-left{
+    flex-basis: 65%;
+}
+.career-left img{
+    width: 100%;
+}
+.career-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.career-left p{
+    color: #999;
+    padding:0 ;
+}
+.career-right{
+    flex-basis: 32%;
+}
+.career-right h3{
+    background: #f44336;
+    color:#fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.career-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+.comment-box h3{
+    text-align: left;
+}
+.resize{
+  resize: none;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin:  10px 0;
+}
+
+
+/*----Login---*/
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .login-box {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    width:400px; 
+    max-width: 90%;
+  }
+  
+  .login-box h2 {
+    text-align: center;
+  }
+  .login-form {
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+
+  .login-form a href{
+    margin: 20px;
+  }
+  .forgot-label p {
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    
+  }
+  
+  .forgot-label a {
+    color: #f44336;
+    text-decoration: none;
+  }
+  
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+  }
+
+  .forgot-label{
+    padding: 10px;
+  }
+  
+  .login-form button {
+    margin: 10px 0;
+  }
+  .log-mid {
+    text-align: center;
+  }
+  .log-mid button {
+    margin-right: 10px;
+  }
+  
+  .log-mid a {
+    margin-left: 10px;
+  }
+  .log-btn {
+    display: inline-block;
+    width: 120px;
+    text-decoration: none;
+    color: #f44336;
+    border: 1px solid #f44336;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .log-btn:hover {
+    border: 1px solid #f44346;
+    background: #f44346;
+    transition: 1s;
+    color: white;
+  }
+  
+
+  /*---contact us---*/
+
+  .area{
+    width: 80%;
+    margin :auto ;
+    padding: 80px 0;
+  }
+  .area iframe{
+    width: 100%;
+  }
+
+  .contact-us{
+    width: 80%;
+    margin: auto;
+  }
+  .contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+  }
+  .contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .contact-col div .fa{
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+  }
+  .contact-col div p{
+    padding: 0;
+
+  }
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.contact-col form{
+    text-align: center;
+}
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/*---FAQ---*/
+.faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  .faq-col {
+    border-radius: 5px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+  
+  
+  .faq-col:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .faq-col h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .faq p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .faq-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .faq-box:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+   /* ------recovey---------*/
+
+    .recov {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+      
+      .recov-box {
+        border: 1px solid #ccc;
+        padding: 10px 20px;
+        width:400px; 
+        max-width: 90%;
+        margin-top: -80px;
+      }
+      
+      .recov-box h2 {
+        text-align: center;
+      }
+      
+      .recov-form {
+        display: block;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 10px;
+      }
+      
+      .recov-form a {
+        margin: 20px;
+      }
+      
+      .recov-label p {
+        text-align: left;
+        font-size: 14px;
+        padding: 10px;
+      }
+      
+      .recov-label a {
+        color: #f44336;
+        text-decoration: none;
+      }
+      
+      .recov-form input {
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        background: #f0f0f0;
+      }
+      
+      .recov-label{
+        padding: 10px;
+      }
+      
+      .recov-form button {
+        margin: 10px auto; /* auto will center the button horizontally */
+      }
+      
+      .center-btn {
+        display: block;
+        margin: 0 auto; /* this will center the button horizontally */
+      }
+      
+      .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+    /* ------recovey---------*/
+
+
+
+      .regist {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+      
+      .regist-box {
+        border: 1px solid #ccc;
+        padding: 10px 20px;
+        width: 400px;
+        max-width: 90%;
+        position: relative;
+        top: -50px;
+      }
+      
+      .regist-box h2 {
+        text-align: center;
+      }
+      
+      .regist-form {
+        display: block;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 10px;
+      }
+      
+      .regist-form input {
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        background: #f0f0f0;
+      }
+      
+      .regist-form button {
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+
+
+
+
+
+      
